@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,28 +52,48 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <!-- <h1 class="title is-1 publication-title">Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective</h1> -->
+
+            <h1 class="title is-1 publication-title">
+              <img
+                src="static/images/logo.png"
+                alt="Site Logo"
+                style="height: 3rem; vertical-align: middle; margin-right: -0.3rem;"
+              >
+              Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective
+            </h1>
+            <span class="is-size-5" style="color:red;">ACL 2025 Findings</span>
+            <br><br>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                <a href="https://yuchenwen1.github.io/" target="_blank">Yuchen Wen</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://kepingbi.github.io/" target="_blank">Keping Bi</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://weichen-cas.github.io/" target="_blank">Wei Chen</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.bigdatalab.ac.cn/gjf/" target="_blank">Jiafeng Guo</a>,
+              </span>
+              <span class="author-block">
+                <a>Xueqi Cheng</a>
+              </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates corresponding author</small></span><br>
+                    <span class="author-block" style="color: #ff0000;">Warning: biased and harmful content included!</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2406.14023" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +103,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,11 +111,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/yuchenwen1/ImplicitBiasPsychometricEvaluation" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,9 +124,20 @@
                   </a>
                 </span>
 
+                  <!-- Benchmark link -->
+                  <span class="link-block">
+                    <a href="https://github.com/yuchenwen1/BUMBLE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>BUMBLE Benchmark</span>
+                  </a>
+                </span>
+
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2406.14023" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -124,11 +155,11 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
+
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,18 +168,76 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle is-5">
+        <span class="is-size-4" style="font-weight: bold;">TL; DR</span><br>
+        <style>
+          /* 将项目符号改为红色实心圆，并增大 */
+          ul.custom-bullets {
+            list-style-type: disc;      /* disc 就是实心圆点 */
+            color: black;                 /* 设置列表符号颜色 */
+            /* font-size: 1.2em;           改变符号和文字大小 */
+            padding-left: 1.2em;        /* 调整左侧缩进，看起来更舒服 */
+          }
+        </style>
+
+        <ul class="custom-bullets">
+          <li>A <b>psychometrics-inspired attack framework</b> is proposed to reveal implicit biases in large language models(LLMs) via three attack methods: <b>Disguise, Deception, and Teaching</b>.</li>
+          <li>We find that LLMs exhibit significant implicit biases in both discriminative and generative tasks, with the extent of bias varying across attack methods, models, languages, and bias types. </li>
+          <li>A bilingual benchmark, <b>BUMBLE</b>, is provided to evaluate LLMs' implicit biases in both English and Chinese.</li>
+        </ul>
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
 <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered  has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL; DR</h2>
+        <div class="content has-text-justified">
+          <p>
+            <style>
+              /* 将项目符号改为红色实心圆，并增大 */
+              ul.custom-bullets {
+                list-style-type: disc;      /* disc 就是实心圆点 */
+                color: #000000;                 /* 设置列表符号颜色 */
+                /* font-size: 1.2em;           改变符号和文字大小 */
+                padding-left: 1.2em;        /* 调整左侧缩进，看起来更舒服 */
+              }
+            </style>
+
+            <ul class="custom-bullets">
+              <li>A <b>psychometrics-inspired attack framework</b> is proposed to reveal implicit biases in large language models(LLMs) via three attack methods: <b>Disguise, Deception, and Teaching</b>.</li>
+              <li>We find that LLMs exhibit significant implicit biases in both discriminative and generative tasks, with the extent of bias varying across attack methods, models, languages, and bias types. </li>
+              <li>A bilingual benchmark, <b>BUMBLE</b>, is provided to evaluate LLMs' implicit biases in both English and Chinese.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            As large language models (LLMs) become an important way of information access, there have been increasing concerns that LLMs may intensify the spread of unethical content, including implicit bias that hurts certain populations without explicit harmful words.
+            In this paper, we conduct a rigorous evaluation of LLMs' implicit bias towards certain demographics by attacking them from a psychometric perspective to elicit agreements to biased viewpoints. Inspired by psychometric principles in cognitive and social psychology, we propose three attack approaches, i.e., Disguise, Deception, and Teaching. Incorporating the corresponding attack instructions, we built two benchmarks: (1) a bilingual dataset with biased statements covering four bias types (2.7K instances) for extensive comparative analysis, and (2) BUMBLE, a larger benchmark spanning nine common bias types (12.7K instances) for comprehensive evaluation.
+            Extensive evaluation of popular commercial and open-source LLMs shows that our methods can elicit LLMs' inner bias more effectively than competitive baselines. 
+            Our attack methodology and benchmarks offer an effective means of assessing the ethical risks of LLMs, driving progress toward greater accountability in their development.
           </p>
         </div>
       </div>
@@ -159,33 +248,33 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- Your image here -->
+
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
+
         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
+
         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
+
       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -194,7 +283,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
@@ -278,7 +367,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{wen2024evaluating,
+  title={Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective},
+  author={Wen, Yuchen and Bi, Keping and Chen, Wei and Guo, Jiafeng and Cheng, Xueqi},
+  journal={arXiv preprint arXiv:2406.14023},
+  year={2024}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
