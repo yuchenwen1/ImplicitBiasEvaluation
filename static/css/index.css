@@ -133,7 +133,25 @@ body {
   font-size: smaller;
 }
 
+.figure-title {
+  color: #666666;
+  font-family: 'Google Sans', sans-serif;
+  margin-top: 10px;
+}
+
 .darkmode-layer, .darkmode-toggle {
   z-index: 500;
+}
+
+.darkmode--activated p, .darkmode--activated li {
+  color: #000;
+}
+
+.button {
+  isolation: isolate;
+}
+
+.darkmode--activated .logo {
+  mix-blend-mode: difference;
 }
 
