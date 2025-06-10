@@ -154,3 +154,10 @@ body {
 .darkmode--activated .logo {
   mix-blend-mode: difference;
 }
+
+.lb-image[src$=".svg"] {
+  max-width: 120vw  !important;
+  /* max-height: 80vh !important; */
+  width: auto     !important;
+  height: auto    !important;
+}

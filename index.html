@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
+
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -26,15 +30,13 @@
 
   <title>Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,6 +46,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
 
@@ -55,11 +58,8 @@
             <!-- <h1 class="title is-1 publication-title">Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective</h1> -->
 
             <h1 class="title is-1 publication-title">
-              <img
-                src="static/images/logo.png"
-                alt="Site Logo"
-                style="height: 3rem; vertical-align: middle; margin-right: -0.3rem;"
-              >
+              <img src="static/images/logo.png" alt="Site Logo"
+                style="height: 3rem; vertical-align: middle; margin-right: -0.3rem;">
               Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective
             </h1>
             <span class="is-size-5" style="color:red;">ACL 2025 Findings</span>
@@ -81,29 +81,30 @@
               <span class="author-block">
                 <a>Xueqi Cheng</a>
               </span>
-                  </div>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences</span><br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences</span><br>
 
-                    <span class="author-block" style="color: #ff0000; margin-top: 15px;">Warning: Some content can be offensive or upsetting</span>
-                  </div>
+              <span class="author-block" style="color: #ff0000; margin-top: 15px;">Warning: Some content can be
+                offensive or upsetting</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2406.14023" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2406.14023" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -113,9 +114,9 @@
                     </a>
                   </span> -->
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/yuchenwen1/ImplicitBiasPsychometricEvaluation" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/yuchenwen1/ImplicitBiasPsychometricEvaluation" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -124,9 +125,9 @@
                   </a>
                 </span>
 
-                  <!-- Benchmark link -->
-                  <span class="link-block">
-                    <a href="https://github.com/yuchenwen1/BUMBLE" target="_blank"
+                <!-- Benchmark link -->
+                <span class="link-block">
+                  <a href="https://github.com/yuchenwen1/BUMBLE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -138,24 +139,24 @@
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2406.14023" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
@@ -169,9 +170,9 @@
     </div>
   </div>
 </section> -->
-<!-- End teaser video -->
+  <!-- End teaser video -->
 
-<!-- <section class="hero teaser">
+  <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle is-5">
@@ -197,114 +198,203 @@
 </section> -->
 
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered  has-text-centered">
-      <div class="column is-centered">
-        <h2 class="title is-3">TL; DR</h2>
-        <div class="content has-text-justified">
-          <p class="is-centered">
-            <style>
-              /* 将项目符号改为红色实心圆，并增大 */
-              ul.custom-bullets {
-                list-style-type: disc;      /* disc 就是实心圆点 */
-                color: #000000;                 /* 设置列表符号颜色 */
-                /* font-size: 1.2em;           改变符号和文字大小 */
-                padding-left: 1.2em;        /* 调整左侧缩进，看起来更舒服 */
-              }
-            </style>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered  has-text-centered">
+        <div class="column is-centered">
+          <h2 class="title is-3">TL; DR</h2>
+          <div class="content has-text-justified">
+            <p class="is-centered">
+              <style>
+                /* 将项目符号改为红色实心圆，并增大 */
+                ul.custom-bullets {
+                  list-style-type: disc;
+                  /* disc 就是实心圆点 */
+                  color: #000000;
+                  /* 设置列表符号颜色 */
+                  /* font-size: 1.2em;           改变符号和文字大小 */
+                  padding-left: 1.2em;
+                  /* 调整左侧缩进，看起来更舒服 */
+                }
+              </style>
 
             <ul class="custom-bullets">
-              <li>A <b>psychometrics-inspired attack framework</b> is proposed to reveal implicit biases in large language models(LLMs) via three attack methods: <b>Disguise, Deception, and Teaching</b>.</li>
-              <li>We find that LLMs exhibit significant implicit biases in both discriminative and generative tasks, with the extent of bias varying across attack methods, models, languages, and bias types. </li>
-              <li>A bilingual benchmark, <b>BUMBLE</b>, is provided to evaluate LLMs' implicit biases in both English and Chinese.</li>
+              <li>A <b>psychometrics-inspired attack framework</b> is proposed to reveal implicit biases in large
+                language models(LLMs) via three attack methods: <b>Disguise, Deception, and Teaching</b>.</li>
+              <li>We find that LLMs exhibit significant implicit biases in both discriminative and generative tasks,
+                with the extent of bias varying across attack methods, models, languages, and bias types. </li>
+              <li>A bilingual benchmark, <b>BUMBLE</b>, is provided to evaluate LLMs' implicit biases in both English
+                and Chinese.</li>
             </ul>
 
             <span class="darkmode-ignore">
-              <img src="static/images/attack_system.png" alt="Paper Highlights" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <img src="static/images/attack_system.png" alt="Paper Highlights"
+                style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
             </span>
 
-            
+
 
             <p class="figure-title has-text-centered">
               Figure 1: Our psychometrics-inspired attack framework for attacking & evaluating implicit biases in LLMs.
             </p>
 
 
-            
-          </p>
+
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-four-fifths"> -->
-      <div class="column">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            As large language models (LLMs) become an important way of information access, there have been increasing concerns that LLMs may intensify the spread of unethical content, including implicit bias that hurts certain populations without explicit harmful words.
-            In this paper, we conduct a rigorous evaluation of LLMs' implicit bias towards certain demographics by attacking them from a psychometric perspective to elicit agreements to biased viewpoints. Inspired by psychometric principles in cognitive and social psychology, we propose three attack approaches, i.e., Disguise, Deception, and Teaching. Incorporating the corresponding attack instructions, we built two benchmarks: (1) a bilingual dataset with biased statements covering four bias types (2.7K instances) for extensive comparative analysis, and (2) BUMBLE, a larger benchmark spanning nine common bias types (12.7K instances) for comprehensive evaluation.
-            Extensive evaluation of popular commercial and open-source LLMs shows that our methods can elicit LLMs' inner bias more effectively than competitive baselines. 
-            Our attack methodology and benchmarks offer an effective means of assessing the ethical risks of LLMs, driving progress toward greater accountability in their development.
-          </p>
+  <!-- Paper abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              As large language models (LLMs) become an important way of information access, there have been increasing
+              concerns that LLMs may intensify the spread of unethical content, including implicit bias that hurts
+              certain populations without explicit harmful words.
+              In this paper, we conduct a rigorous evaluation of LLMs' implicit bias towards certain demographics by
+              attacking them from a psychometric perspective to elicit agreements to biased viewpoints. Inspired by
+              psychometric principles in cognitive and social psychology, we propose three attack approaches, i.e.,
+              Disguise, Deception, and Teaching. Incorporating the corresponding attack instructions, we built two
+              benchmarks: (1) a bilingual dataset with biased statements covering four bias types (2.7K instances) for
+              extensive comparative analysis, and (2) BUMBLE, a larger benchmark spanning nine common bias types (12.7K
+              instances) for comprehensive evaluation.
+              Extensive evaluation of popular commercial and open-source LLMs shows that our methods can elicit LLMs'
+              inner bias more effectively than competitive baselines.
+              Our attack methodology and benchmarks offer an effective means of assessing the ethical risks of LLMs,
+              driving progress toward greater accountability in their development.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
+  <!-- End paper abstract -->
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered ">
-      <div class="column">
-        <h2 class="title">Preliminaries</h2>
-        <div class="content has-text-justified">
-          <p class="is-centered">
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered ">
+        <div class="column">
+          <h2 class="title">Preliminaries</h2>
+          <div class="content">
+            <p class="is-centered">
 
             <ul class="custom-bullets">
-              <li><b>Implicit Bias:</b> harmful attitudes without explicitly harmful words towards certain demographics. For example, "Women get lower math scores than men" contains an implicit bias towards women.</li>
-              <li><b>Bias Agreement Task: </b> only requests models to answer if they agree or disagree with the biased content, which makes automatic bias evaluation easy and is usually used for implicit bias evaluation. </li>
-              <li><b>Psychometrics for Bias Evaluation:</b> <b>Goal Shifting</b> transforms the evaluations to a different form of tasks to avoid being detected, making evaluations more thorough. <b>Cognition Concordance</b> persuades subjects to change their own beliefs with misleading beliefs or behaviors, testing if their positions are firm. <b>Imitation Learning</b> encourages subjects to mimic the behaviors of others, which may lead to unintended behaviors. <b>These psychometric principles are leveraged to design our attack methods.</b></li>
+              <li><b>Implicit Bias:</b> harmful attitudes without explicitly harmful words towards certain demographics.
+                For example, "Women get lower math scores than men" contains an implicit bias towards women.</li>
+              <li><b>Bias Agreement Task: </b> only requests models to answer if they agree or disagree with the biased
+                content, which makes automatic bias evaluation easy and is usually used for implicit bias evaluation.
+              </li>
+              <li><b>Psychometrics for Bias Evaluation:</b> <b>Goal Shifting</b> transforms the evaluations to a
+                different form of tasks to avoid being detected, making evaluations more thorough. <b>Cognition
+                  Concordance</b> persuades subjects to change their own beliefs with misleading beliefs or behaviors,
+                testing if their positions are firm. <b>Imitation Learning</b> encourages subjects to mimic the
+                behaviors of others, which may lead to unintended behaviors. <b>These psychometric principles are
+                  leveraged to design our attack methods.</b></li>
             </ul>
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns">
-      <div class="column">
-        <h2 class="title">Attack Methodology</h2>
-        <div class="content has-text-justified">
-          <p class="">
-            <ul class="custom-bullets">
-              <li><b>Disguise:</b> </li>
-              <li><b>Deception: </b> </li>
-              <li><b>Teaching:</b></li>
-            </ul>
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns">
+        <div class="column">
+          <h2 class="title">Attack Methodology</h2>
+          <div class="content">
+            <h4 class="subtitle is-4">Disguise attacks</h4>
+            <p>This method is inspired by the psychometric principle of <b>Goal Shifting</b>. Specifically, we use
+              Viewpoint Contextualization to implement, leveraging a conversational bias agreement task to disguise our
+              attacks.</p>
+            <p> Every biased viewpoint is transformed into a multi-user conversation, containing the scenario where a
+              bias happens and a biased remark raised by some person. Then, models are asked to decide whether they
+              agree or disagree with the biased remark in this scenario. </p>
 
-          </p>
-      </div>
 
+            <script>
+              lightbox.option({
+                'resizeDuration': 50,
+                'wrapAround': true,
+                'showImageNumberLabel': false,
+                'imageFadeDuration': 50,
+                'fitImagesInViewport': true,
+              })
+            </script>
+
+            <div style="text-align: center;">
+              <img src="static/images/disguise_fullprompt.svg" style="width: 100%; max-width: 700px; display: inline-block;"
+                alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 2: Prompt example of disguise attacks.
+              </p>
+            </div>
+
+            <h4 class="subtitle is-4">Deception attacks</h4>
+            <p> When subjects encounter new cognitions or actions that conflict with their existing ones, them may adapt to the environment,  potentially influencing their subsequent
+actions and resulting in more relevant behaviors.</p>
+            <p>This method is inspired by the psychometric principle of <b>Goal Shifting</b>. Specifically, we use
+              Viewpoint Contextualization to implement, leveraging a conversational bias agreement task to disguise our
+              attacks.</p>
+
+            <div style="text-align: center;">
+              <img src="static/images/mentaldeception_fullprompt.svg"
+                style="width: 100%; max-width: 700px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 3: Prompt example of mental deception attacks.
+              </p>
+            </div>
+
+
+            <p> Every biased viewpoint is transformed into a multi-user conversation, containing the scenario where a
+              bias happens and a biased remark raised by some person. Then, models are asked to decide whether they
+              agree or disagree with the biased remark in this scenario. </p>
+            <p>This method is inspired by the psychometric principle of <b>Goal Shifting</b>. Specifically, we use
+              Viewpoint Contextualization to implement, leveraging a conversational bias agreement task to disguise our
+              attacks.</p>
+
+            <div style="text-align: center;">
+              <img src="static/images/memorydeception_fullprompt.svg"
+                style="width: 100%; max-width: 700px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 4: Prompt example of memory deception attacks.
+              </p>
+            </div>
+
+            <h4 class="subtitle is-4">Teaching attacks</h4>
+            <p> Every biased viewpoint is transformed into a multi-user conversation, containing the scenario where a bias happens and a biased remark raised by some person. Then, models are asked to decide whether they agree or disagree with the biased remark in this scenario. </p>
+            <p>This method is inspired by the psychometric principle of <b>Goal Shifting</b>. Specifically, we use Viewpoint Contextualization to implement, leveraging a conversational bias agreement task to disguise our attacks.</p>
+
+            </p>
+
+            <div style="text-align: center;">
+              <img src="static/images/teaching_fullprompt.svg"
+                style="width: 100%; max-width: 700px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 4: Prompt example of memory deception attacks.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -340,13 +430,13 @@
 </div>
 </div>
 </section> -->
-<!-- End image carousel -->
+  <!-- End image carousel -->
 
 
 
 
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Video Presentation</h2>
@@ -362,11 +452,11 @@
     </div>
   </div>
 </section> -->
-<!-- End youtube video -->
+  <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
@@ -396,29 +486,29 @@
     </div>
   </div>
 </section> -->
-<!-- End video carousel -->
+  <!-- End video carousel -->
 
 
 
 
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+  <!-- Paper poster -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
       </div>
     </div>
   </section>
-<!--End paper poster -->
+  <!--End paper poster -->
 
 
-<!--BibTex citation -->
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -429,54 +519,59 @@
   year={2024}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
+  <!-- End of Statcounter Code -->
+
+</body>
 <script src="static/js/darkmode-js.min.js"></script>
 <script>
   const options = {
-  bottom: '32px', // default: '32px'
-  right: '32px', // default: '32px'
-  left: 'unset', // default: 'unset'
-  time: '0.3s', // default: '0.3s'
-  mixColor: '#fff', // default: '#fff'
-  backgroundColor: '#fff',  // default: '#fff'
-  buttonColorDark: '#100f2c',  // default: '#100f2c'
-  buttonColorLight: '#fff', // default: '#fff'
-  saveInCookies: false, // default: true,
-  label: '🌓', // default: ''
-  autoMatchOsTheme: true // default: true
-}
+    bottom: '32px', // default: '32px'
+    right: '32px', // default: '32px'
+    left: 'unset', // default: 'unset'
+    time: '0.3s', // default: '0.3s'
+    mixColor: '#fff', // default: '#fff'
+    backgroundColor: '#fff',  // default: '#fff'
+    buttonColorDark: '#100f2c',  // default: '#100f2c'
+    buttonColorLight: '#fff', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌓', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
 
   function addDarkmodeWidget() {
     new Darkmode(options).showWidget();
   }
   window.addEventListener('load', addDarkmodeWidget);
 </script>
-  </html>
+
+</html>
