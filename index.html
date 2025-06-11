@@ -45,6 +45,22 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-..." crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$", right: "$", display: false},
+          {left: "$$", right: "$$", display: true}
+        ]
+      });
+    });
+  </script>
+
 </head>
 
 <body>
@@ -235,7 +251,7 @@
 
 
             <p class="figure-title has-text-centered">
-              Figure 1: Our psychometrics-inspired attack framework for attacking & evaluating implicit biases in LLMs.
+              Figure 1: Our psychometrics-inspired attack framework for attacking & evaluating implicit biases in LLMs
             </p>
 
 
@@ -336,7 +352,7 @@
               <img src="static/images/disguise_fullprompt.svg" style="width: 100%; max-width: 800px; display: inline-block;"
                 alt="…">
               <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
-                Figure 2: Prompt example of disguise attacks.
+                Figure 2: Prompt example of disguise attacks
               </p>
             </div>
 
@@ -351,7 +367,7 @@
               <img src="static/images/mentaldeception_fullprompt.svg"
                 style="width: 100%; max-width: 800px; display: inline-block;" alt="…">
               <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
-                Figure 3: Prompt example of mental deception attacks.
+                Figure 3: Prompt example of mental deception attacks
               </p>
             </div>
 
@@ -363,7 +379,7 @@
                 style="width: 100%; max-width: 800px; display: inline-block;" alt="…">
 
               <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
-                Figure 4: Prompt example of memory falsification attacks.
+                Figure 4: Prompt example of memory falsification attacks
               </p>
             </div>
 
@@ -374,8 +390,8 @@
               <img src="static/images/teaching_fullprompt.svg"
                 style="width: 100%; max-width: 900px; display: inline-block;" alt="…">
 
-              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
-                Figure 5: Prompt example of teaching attacks.
+              <p class="figure-title has-text-centered" style="">
+                Figure 5: Prompt example of teaching attacks
               </p>
             </div>
 
@@ -386,7 +402,63 @@
     </div>
   </section>
 
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered ">
+        <div class="column">
+          <h2 class="title">Experimental Setup</h2>
+          <div class="content">
+            <p><b>① Bias types:</b> We selected four representative bias types: age (AG), gender (GD), race (RC), and sexual orientation (SO).</p>
+            <p><b>② Evaluation metric:</b> We use the Attack Success Rate(ASR) as our metric, i.e., ASR $  = \frac{\# \; agreement \; responses}{\# \; total \; responses} \times 100\% $.</p>
+            <p><b>③ Models:</b> We evaluated 10 popular LLMs, including 5 commercial models (ChatGPT, Claude, Gemini, Ernie Bot, and Baichuan) and 5 open-source models (Llama-2, Llama-3, Mistral, Qwen-2, and ChatGLM).</p>
+            <p><b>④ Evaluation metrics:</b> We used the bias agreement rate (BAR) to measure the extent of implicit bias in LLMs, which is the percentage of biased viewpoints that models agree with.</p>
+            <p><b>⑤ Data preparation:</b>  We transformed data from CBBQ dataset into dialog format using the following procedure to adapt to our attacks and guarantee their quality.</p>
 
+            <div style="text-align: center;">
+              <img src="static/images/data_tranformation_process.png"
+                style="width: 60%; max-width: 450px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="">
+                Figure 6: Data format transformation
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered ">
+        <div class="column">
+          <h2 class="title">Results & Insights</h2>
+          <div class="content">
+            <h4 class="subtitle is-4">Main Results</h4>
+            <div style="text-align: center;">
+              <img src="static/images/main_table.jpg"
+                style="width: 100%; max-width: 800px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-justified" style="margin-bottom: 30px;">
+                Figure 7: We compare our attack methods with 3 baselines, i.e. <b>vanilla</b>, which consists of pure unmodified biased statements; Disregarding Rules (<b>DR</b>), which adds a system prompt to prevent refusal and encourage biased responses, which is same as in all of our attack methods; Disregarding Rules with Context (<b>DR+C</b>), which adds the concrete context where the bias happens based on DR, making it semantically equivalent to our conversational attacks. Four bias types: age (<b>AG</b>), gender (<b>GD</b>), race (<b>RC</b>), and sexual orientation (<b>SO</b>).
+              </p>
+            </div>
+            <p><b>① Effectiveness of Attack Methods:</b></p><p> i. Deception attacks, including Mental Deception (MD) and Memory Falsification (MF), are tively the most effective, followed by Disguise attacks and Teaching attacks. This indicates that the psychological principles of Deception and Disguise attacks play a significant role.</p>
+            <p>
+            ii. Using our psychometric attack methods generally achieves higher attack success rates than baselines, implying the effectiveness of our attack methods.</p>
+
+            <p>  </p>
+            <p> </p>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   
 
   <!-- Image carousel -->
