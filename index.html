@@ -314,7 +314,7 @@
           <h2 class="title">Attack Methodology</h2>
           <div class="content">
             <h4 class="subtitle is-4">Disguise attacks</h4>
-            <p>This method is inspired by the psychometric principle of <b>Goal Shifting</b>. Specifically, we use
+            <p>This method is inspired by the psychometric principle of Goal Shifting. Specifically, we use
               Viewpoint Contextualization to implement, leveraging a conversational task to disguise our
               attacks.</p>
             <p> Every biased viewpoint is transformed into a multi-user conversation, containing the scenario where a
@@ -333,7 +333,7 @@
             </script>
 
             <div style="text-align: center;">
-              <img src="static/images/disguise_fullprompt.svg" style="width: 100%; max-width: 700px; display: inline-block;"
+              <img src="static/images/disguise_fullprompt.svg" style="width: 100%; max-width: 800px; display: inline-block;"
                 alt="…">
               <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
                 Figure 2: Prompt example of disguise attacks.
@@ -341,8 +341,11 @@
             </div>
 
             <h4 class="subtitle is-4">Deception attacks</h4>
-            <p> Introduction to Deception attacks here.</p>
-            <p> </p>
+            <p> In Cognitive and Social Psychology, Cognition Concordance refers to the reconciliation process when subjects encounter new cognitions or actions that conflict with their existing ones, which may cause them to adapt to the environment.</p>
+
+            <p>
+            Deception attacks leverage Cognition Concordance to mislead LLMs with new ideas (bias indoctrination) or behaviors (forged context), potentially influencing their subsequent actions and resulting in more relevant behaviors. We used two methods, <b>Mental Deception</b> and <b>Memory Falsification</b>, to implement Deception attacks.</p>
+            <p><b>① Mental Deception</b> asks models to believe in a biased viewpoint through the system prompt. </p>
 
             <div style="text-align: center;">
               <img src="static/images/mentaldeception_fullprompt.svg"
@@ -353,23 +356,19 @@
             </div>
 
 
-            <p> Introduction to Deception attacks here. </p>
-            <p> </p>
+            <p> <b>② Memory Falsification</b> forged a biased context (through API) to pretend that the model itself have responsed biased content, and tested whether they will agree with similar content. </p>
 
             <div style="text-align: center;">
               <img src="static/images/memorydeception_fullprompt.svg"
                 style="width: 100%; max-width: 800px; display: inline-block;" alt="…">
 
               <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
-                Figure 4: Prompt example of memory deception attacks.
+                Figure 4: Prompt example of memory falsification attacks.
               </p>
             </div>
 
             <h4 class="subtitle is-4">Teaching attacks</h4>
-            <p> Introduction to Teaching attacks here. </p>
-            <p> </p>
-
-            </p>
+            <p> In Social Psychology, Imitation Learning refers to learning by mimicking others’ behaviors, which is also common in society. Teaching attacks leverage Imitation Learning by providing several examples to imitate, which may cause more relevant behaviors. We add three biased statements, leveraging the few-shot learning ability of LLMs and design both discriminative and generative tasks. </p>
 
             <div style="text-align: center;">
               <img src="static/images/teaching_fullprompt.svg"
