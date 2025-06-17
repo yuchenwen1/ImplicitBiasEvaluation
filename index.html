@@ -119,6 +119,17 @@
                   </a>
                 </span>
 
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2406.14023" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
                 <!-- Supplementary PDF link -->
                 <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
@@ -152,14 +163,27 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
+
+
+                <!-- Youtube video presentation Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2406.14023" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="#poster"
+                    class=" button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>arXiv</span>
+                    <span>Poster</span>
+                  </a>
+                </span>
+
+                <!-- Youtube video presentation Link -->
+                <span class="link-block">
+                  <a href="#video_presentation"
+                    class=" button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video Presentation</span>
                   </a>
                 </span>
               </div>
@@ -410,8 +434,8 @@
           <div class="content">
             <p><b>① Bias types:</b> We selected four representative bias types: age (AG), gender (GD), race (RC), and sexual orientation (SO).</p>
             <p><b>② Evaluation metric:</b> We use the Attack Success Rate(ASR) as our metric, i.e., ASR $  = \frac{\# \; agreement \; responses}{\# \; total \; responses} \times 100\% $.</p>
-            <p><b>③ Models:</b> We evaluated 10 popular LLMs, including 5 commercial models (ChatGPT, Claude, Gemini, Ernie Bot, and Baichuan) and 5 open-source models (Llama-2, Llama-3, Mistral, Qwen-2, and ChatGLM).</p>
-            <p><b>④ Evaluation metrics:</b> We used the bias agreement rate (BAR) to measure the extent of implicit bias in LLMs, which is the percentage of biased viewpoints that models agree with.</p>
+            <p><b>③ Repeated tests:</b> To reduce sampling error, each test is repeated 10 times.</p>
+            <p><b>④ LLMs:</b> Representative commercial and open-source LLMs are included, like GPT-4, GPT-3.5, Mistral-v0.3, Llama-3, Qwen-2.</p>
             <p><b>⑤ Data preparation:</b>  We transformed data from CBBQ dataset into dialog format using the following procedure to adapt to our attacks and guarantee their quality.</p>
 
             <div style="text-align: center;">
@@ -440,17 +464,60 @@
               <img src="static/images/main_table.jpg"
                 style="width: 100%; max-width: 800px; display: inline-block;" alt="…">
               <p class="figure-title has-text-justified" style="margin-bottom: 30px;">
-                Figure 7: We compare our attack methods with 3 baselines, i.e. <b>vanilla</b>, which consists of pure unmodified biased statements; Disregarding Rules (<b>DR</b>), which adds a system prompt to prevent refusal and encourage biased responses, which is same as in all of our attack methods; Disregarding Rules with Context (<b>DR+C</b>), which adds the concrete context where the bias happens based on DR, making it semantically equivalent to our conversational attacks. Four bias types: age (<b>AG</b>), gender (<b>GD</b>), race (<b>RC</b>), and sexual orientation (<b>SO</b>).
+                Figure 7: Results of attack success rates (ASR↑), higher ASR means more biases are exposed. 3 baselines are included, i.e. <b>vanilla</b>, which consists of pure unmodified biased statements; Disregarding Rules (<b>DR</b>), which adds a system prompt to prevent refusal and encourage biased responses, which is same as in all of our attack methods; Disregarding Rules with Context (<b>DR+C</b>), which adds the concrete context where the bias happens based on DR, making it semantically equivalent to our conversational attacks. Four bias types: age (<b>AG</b>), gender (<b>GD</b>), race (<b>RC</b>), and sexual orientation (<b>SO</b>).
               </p>
             </div>
-            <p><b>① Effectiveness of Attack Methods:</b></p><p> i. Deception attacks, including Mental Deception (MD) and Memory Falsification (MF), are tively the most effective, followed by Disguise attacks and Teaching attacks. This indicates that the psychological principles of Deception and Disguise attacks play a significant role.</p>
+            <p><b>① Effectiveness of Attack Methods:</b></p>
+            <p> (i) <b>Deception attacks, including Mental Deception (MD) and Memory Falsification (MF), are tively the most effective</b>, followed by Disguise attacks and Teaching attacks. This indicates that the psychological principles of Deception and Disguise attacks play a significant role.</p>
             <p>
-            ii. Using our psychometric attack methods generally achieves higher attack success rates than baselines, implying the effectiveness of our attack methods.</p>
+            (ii) <b>Using our psychometric attack methods generally achieves higher attack success rates than baselines, implying the effectiveness of our attack methods.</b></p>
 
-            <p> </p>
-            <p> </p>
+            <p><b>② Models' Comparison:</b></p>
+            <p> <b>The safest tier includes GPT-4-1106-preview, GLM-3-turbo, and Mistral-7B-Instruct-v0.3.</b> The second tier includes Qwen2-7B-Instruct, GLM-4- 9b-chat, and GPT-3.5-turbo-0301. The least safe tier includes GPT-3.5-turbo-1106 and Llama-3-8BInstruct.</p>
+
+            <p><b>③ Bias Types' Comparison:</b></p>
+            <p> <b>LLMs are more likely to reveal inherent biases in mild bias types (e.g., age) than severe ones (e.g., race) under attacks.</b> Possible reasons include (i) biased statements in severe bias types are more evident and can be easily recognized by LLMs, (ii) more RLHF training is designated towards the bias types of more negative social impact, (iii) biases contained in training data may differ across different categories, leading to uneven bias distribution in LLMs.</p>
+
+            <p><b>④ Attacks in Dialog Format</b></p>
+            <p>Compare Disguise-VC and Baseline-DR+C, which contain the same semantics and only differ in the format of attacks. The higher ASR of Disguise attacks shows that <b>attacks in dialog formats is more effective than in declarative formats.</b> </p>
 
 
+            <h4 class="subtitle is-4">Further Analyses</h4>
+            <p><b>① Language Difference:</b></p>
+
+            <div style="text-align: center;">
+              <img src="static/images/language_diff_bar.jpg"
+                style="width: 50%; max-width: 800px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered " style="margin-bottom: 30px;">
+                Figure 8: The average difference of Attack Success Rate (ASR↑) between English and Chinese (ASR$_{EN}$ - ASR$_{CN}$). Values above 0 mean models reveal more bias in English, while values below 0 mean models reveal more bias in Chinese.
+              </p>
+            </div>
+
+            <p>Shown in Figure 8, models that support English but do not support Chinese officially, like GPT-3.5, Mistral-v0.3, and Llama-3, exhibit more biases under English attacks compared with Chinese, while models that support both Chinese and English, like GLM-3, Qwen-2 and GLM-4, show more biases in Chinese. The reason might be that (i) models’ abilities to follow instructions are stronger in their mainly targeted language, (ii) the training corpora might also be more extensive in this language, leading to more bias expressed in the text learned.</p>
+
+            <p><b>② Bias Generative Task:</b></p>
+
+            <div style="text-align: center;">
+              <img src="static/images/generation_example.png"
+                style="width: 50%; max-width: 800px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 9: Generations by GLM-3-turbo under Teaching attacks in the bias generation task.
+              </p>
+            </div>
+
+            <p>We apply Teaching attacks to bias generation task, i.e., asking LLMs to generate more biased statements given several biased examples. As shown in Figure 9, generative tasks can disclose other types of implicit bias within LLMs, different from the bias type they are taught. This highlights the existence of a wide variety of inherent biases in LLMs.</p>
+
+            <p><b>③ Model Updates of GPT Series:</b></p>
+
+            <div style="text-align: center;">
+              <img src="static/images/models_radar.jpg"
+                style="width: 50%; max-width: 800px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 10: Comparison of attack success rate (ASR↑) between 3 GPT models.
+              </p>
+            </div>
+
+            <p>As is shown in Figure 10, the updated GPT-3.5-turbo-1106 model may possess a stronger instruction-following capability than GPT-3.5-turbo-0301, which, however, leads to more vulnerability under attacks; compared to GPT-3.5 models, GPT-4 demonstrates significant safety improvements.</p>
 
 
           </div>
@@ -459,7 +526,46 @@
     </div>
   </section>
   
-  
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered ">
+        <div class="column">
+          <h2 class="title">BUMBLE Benchmark</h2>
+          <div class="content">
+            <p>For a more comprehensive evaluation, we built the BilingUal iMplicit Bias evaLuation bEnchmark (BUMBLE) based on the BBQ dataset on nine common bias categories, totaling 12.7K instances. We used the same data transformation process as in Figure 6, translated data into two languages, and applied the 7 attack methods on them.</p>
+
+            <div style="text-align: center;">
+              <img src="static/images/BUMBLE.jpg"
+                style="width: 70%; max-width: 450px; display: inline-block;" alt="…">
+              <p class="figure-title has-text-centered" style="margin-bottom: 30px;">
+                Figure 11: Results of GPT-3.5 on BUMBLE. Above: English results, Below: Chinese results. AG: Age, DA: Disability, GD: Gender, NA: Nationality, PH: Physical Appearance, RA: Race, RE: Religion, SS: Socioeconomic Status, SO: Sexual Orientation, Avg.:Average.
+              </p>
+            </div>
+
+            <p>We tested GPT-3.5 on BUMBLE benchmark and the results are shown in Figure 11. Deception attacks (Mental Deception and Memory Falsification attacks) tend to be the most effective. Comparing bias in different categories, we found that GPT-3.5 is more likely to reveal inherent biases in age, gender, nationality, etc., and is less likely in race, religion, etc. </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered ">
+        <div class="column">
+          <h2 class="title">Conclusion</h2>
+          <div class="content">
+
+            <p><b>We propose an attack methodology using psychometrics to elicit LLMs’ implicit bias.</b> By attacking representative commercial and open-source models, including GPT-3.5, GPT-4, Llama-3, Mistral, etc., we find that all three attacks can elicit implicit bias in LLMs. Among evaluated LLMs, GLM-3, GPT-4, and Mistral are relatively safer, possibly due to strict safety requirements and RLHF alignment. Additionally, bias in different categories exhibits similarity, with LLMs capable of transferring bias from one category to another. We also conducted analytical experiments on different languages, roles played, etc. We expand the evaluation to broader categories and form a bilingual benchmark, BUMBLE, with 12.7K testing examples. In the future, we will evaluate more LLMs, include more psychological principles, and utilize psychological principles for safety defenses.</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Image carousel -->
   <!-- <section class="hero is-small">
@@ -562,10 +668,10 @@
 
 
   <!-- Paper poster -->
-  <section class="hero is-small is-light">
+  <section class="hero is-small is-light" id="poster">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title">Poster</h2>
+        <h2 class="title">Poster (TBC)</h2>
 
         <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
         </iframe>
@@ -575,6 +681,24 @@
   </section>
   <!--End paper poster -->
 
+    <!-- Youtube video -->
+  <section class="hero is-small is-light" id="video_presentation">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation (TBC)</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- End youtube video -->
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -607,6 +731,24 @@
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
 
+            <!-- Default Statcounter code for Implicit Bias Evaluation https://yuchenwen1.github.io/ImplicitBiasEvaluation/ -->
+
+            <script type="text/javascript">
+            var sc_project=13143767; 
+            var sc_invisible=0; 
+            var sc_security="d1ecf4bc"; 
+            var scJsHost = "https://";
+            document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+            "statcounter.com/counter/counter.js'></"+"script>");
+            </script>
+
+            <noscript><div class="statcounter"><a title="Web Analytics"
+            href="https://statcounter.com/" target="_blank"><img class="statcounter"
+            src="https://c.statcounter.com/13143767/0/d1ecf4bc/0/" alt="Web Analytics"
+            referrerPolicy="no-referrer-when-downgrade"></a></div></noscript><br>
+            <a href="https://statcounter.com/p13143767/?guest=1">View My Stats</a>
+            
+
           </div>
         </div>
       </div>
@@ -616,22 +758,13 @@
   <!-- Statcounter tracking code -->
 
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-<!-- Default Statcounter code for Implicit Bias Evaluation
-https://yuchenwen1.github.io/ImplicitBiasEvaluation/ -->
-<script type="text/javascript">
-var sc_project=13143767; 
-var sc_invisible=0; 
-var sc_security="d1ecf4bc"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13143767/0/d1ecf4bc/0/" alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+
 <!-- End of Statcounter Code -->
   <!-- End of Statcounter Code -->
+
+
 
 </body>
 <script src="static/js/darkmode-js.min.js"></script>
